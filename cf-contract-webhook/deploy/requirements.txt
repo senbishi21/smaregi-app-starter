@@ -1,0 +1,3 @@
+# Function dependencies, for example:
+# package>=version
+firebase-admin>=4.5.0
