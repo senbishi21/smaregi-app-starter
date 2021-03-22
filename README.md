@@ -8,4 +8,5 @@
 - サブコンポーネント：Cloud Storage（実行バイナリの保存先）、Error Reporting（アラート用）
 
 # 使い方
-こちらのQiita記事をご覧下さい。
+こちらのQiita記事に詳細な手順を書いておりますのでご覧下さい。
+https://qiita.com/senbishi/items/cc55e64f71b5c2a6eff0
