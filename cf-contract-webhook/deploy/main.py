@@ -51,7 +51,7 @@ def contract_update_webhook_receiver(request):
         }
         doc_ref.set(data_to_update)
 
-        # send PubSub task to sync employee address data immediately
+        ### Do what you want for initial data sync
         initial_data_sync(contract_id)
 
 
@@ -103,6 +103,8 @@ def get_firestore_instance():
     db = firestore.client()
     return db
 
+def initial_data_sync(contract_id):
+    print("do initial sync")
 
 ######## LOCAL TESTING ########
 app  = Flask(__name__)
