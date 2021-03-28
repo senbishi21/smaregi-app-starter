@@ -30,7 +30,6 @@ function enableAPI() {
 	else
 	    echo "Enabling $1 API. Activation needs ~1min, please wait:)"
 	    gcloud services enable $1
-	    sleep 60
 	fi
 }
 
@@ -38,6 +37,11 @@ enableAPI "firestore.googleapis.com"
 enableAPI "cloudfunctions.googleapis.com"
 enableAPI "cloudbuild.googleapis.com"
 enableAPI "clouderrorreporting.googleapis.com"
+enebleAPI "storage.googleapis.com"
+sleep 20
+
+# リージョンのデフォルトを東京(asia-northeast1)に
+gcloud config set run/region asia-northeast1
 
 # Firestoreには公式のCLIが存在しないため、Pythonで初期化
 # ローカル環境を汚さないよう、Dockerで実装
