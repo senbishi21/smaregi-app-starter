@@ -37,7 +37,7 @@ enableAPI "firestore.googleapis.com"
 enableAPI "cloudfunctions.googleapis.com"
 enableAPI "cloudbuild.googleapis.com"
 enableAPI "clouderrorreporting.googleapis.com"
-enebleAPI "storage.googleapis.com"
+enableAPI "storage.googleapis.com"
 sleep 20
 
 # リージョンのデフォルトを東京(asia-northeast1)に
