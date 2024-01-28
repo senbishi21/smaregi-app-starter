@@ -42,6 +42,12 @@ CLOUD_FUNC_ENTRYPOINT="login_redirect"
 echo "[${DEPLOY_ENV}] Deploy ${CLOUD_FUNC_NAME} func"
 echo "[${DEPLOY_ENV}] Entry point is ${CLOUD_FUNC_ENTRYPOINT}"
 
+# Check if the environment is 'prod' and PROD_MAIN_URL is empty
+if [ $DEPLOY_ENV = "prod" ] && [ -z "$PROD_MAIN_URL" ]; then
+    echo "Error: PROD_MAIN_URL is not set for prod environment."
+    exit 1
+fi
+
 if [ $DEPLOY_ENV = "qa" ]; then
 	gcloud functions deploy $CLOUD_FUNC_NAME \
 		--source $SCRIPT_DIR/deploy\
